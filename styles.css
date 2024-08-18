@@ -1,4 +1,3 @@
-/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -12,6 +11,8 @@ header {
     color: #fff;
     padding: 20px;
     text-align: center;
+    position: relative;
+    z-index: 1000; 
 }
 
 nav ul {
@@ -20,10 +21,11 @@ nav ul {
     display: flex;
     justify-content: center;
     margin: 0;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0 10px;
 }
 
 nav ul li a {
@@ -31,6 +33,8 @@ nav ul li a {
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
+    padding: 10px; 
+    display: inline-block;
 }
 
 nav ul li a:hover {
@@ -38,12 +42,13 @@ nav ul li a:hover {
 }
 
 #hero {
-    background: url('images/hero-image.jpg') no-repeat center center;
+    background: url('images/hero-image.jpg') no-repeat center center; /* Ensure the image exists */
     background-size: cover;
-    text-align: center;
-    padding: 150px 0;
     color: #fff;
+    padding: 150px 20px; /* Adjusted padding for small screens */
+    text-align: center;
     border-bottom: 5px solid #ffcc00; 
+    background-color: #004d99; /* Fallback color */
 }
 
 #hero h1 {
@@ -54,7 +59,8 @@ nav ul li a:hover {
 
 #hero input {
     padding: 15px;
-    width: 60%;
+    width: 80%;
+    max-width: 500px;
     margin-top: 20px;
     border-radius: 25px;
     border: 2px solid #ffcc00;
@@ -83,6 +89,17 @@ main {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+@media screen and (max-width: 768px) {
+    .destination-card, .itinerary-item, .review-item {
+        flex: 1 1 calc(50% - 20px); /* Two columns on tablets */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .destination-card, .itinerary-item, .review-item {
+        flex: 1 1 calc(100% - 20px); /* One column on phones */
+    }
+}
 
 .destination-card:hover, .itinerary-item:hover, .review-item:hover {
     transform: translateY(-10px);
@@ -98,7 +115,7 @@ main {
 .destination-card h3 {
     font-size: 1.5em;
     color: #004d99; 
-    margin: 10px;
+    margin: 10px 0;
 }
 
 .destination-card p {
@@ -121,11 +138,12 @@ form {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 form input, form select, form textarea {
     display: block;
-    width: 100%;
+    width: calc(100% - 24px);
     margin-bottom: 10px;
     padding: 12px;
     border-radius: 5px;
