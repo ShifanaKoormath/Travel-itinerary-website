@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <meta name="description" content="Explore our travel website for destination guides, itineraries, booking options, and user reviews.">
+    <meta name="keywords" content="travel, destination guides, itineraries, booking, reviews">
+    <meta name="author" content="Your Name">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#itineraries">Itineraries</a></li>
+                <li><a href="#booking">Booking</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <section id="hero">
+            <h1>Explore Your Next Adventure</h1>
+            <input type="text" id="search" placeholder="Search destinations...">
+        </section>
+    </header>
+    <main>
+        <section id="destinations">
+            <h2>Popular Destinations</h2>
+            <div class="destination-grid">
+                <!-- Destination 1 -->
+                <div class="destination-card">
+                    <img src="images/paris.jpeg" alt="Paris">
+                    <h3>Paris, France</h3>
+                    <p>Experience the romance and culture of Paris, known for its iconic landmarks like the Eiffel Tower and the Louvre Museum.</p>
+                </div>
+                <!-- Destination 2 -->
+                <div class="destination-card">
+                    <img src="images/tokyo.jpeg" alt="Tokyo">
+                    <h3>Tokyo, Japan</h3>
+                    <p>Discover the vibrant culture of Tokyo, a city known for its bustling streets, historic temples, and cutting-edge technology.</p>
+                </div>
+                <!-- Destination 3 -->
+                <div class="destination-card">
+                    <img src="images/newyork.jpeg" alt="New York">
+                    <h3>New York City, USA</h3>
+                    <p>Explore the bustling city of New York, famous for its skyscrapers, Broadway shows, and diverse neighborhoods.</p>
+                </div>
+            </div>
+        </section>
+        <section id="itineraries">
+            <h2>Travel Itineraries</h2>
+            <div class="itinerary-list">
+                <!-- Itinerary 1 -->
+                <div class="itinerary-item">
+                    <h3>3 Days in Paris</h3>
+                    <p>Day 1: Visit the Eiffel Tower and take a Seine River cruise.</p>
+                    <p>Day 2: Explore the Louvre Museum and Notre-Dame Cathedral.</p>
+                    <p>Day 3: Stroll through Montmartre and visit Sacré-Cœur Basilica.</p>
+                </div>
+                <!-- Itinerary 2 -->
+                <div class="itinerary-item">
+                    <h3>5 Days in Tokyo</h3>
+                    <p>Day 1: Explore Shibuya Crossing and Shinjuku.</p>
+                    <p>Day 2: Visit Asakusa and the Senso-ji Temple.</p>
+                    <p>Day 3: Enjoy Akihabara and Tokyo Tower.</p>
+                    <p>Day 4: Discover Harajuku and Meiji Shrine.</p>
+                    <p>Day 5: Take a day trip to Mt. Fuji.</p>
+                </div>
+                <!-- Itinerary 3 -->
+                <div class="itinerary-item">
+                    <h3>4 Days in New York City</h3>
+                    <p>Day 1: Visit Times Square and Broadway.</p>
+                    <p>Day 2: Explore Central Park and the Metropolitan Museum of Art.</p>
+                    <p>Day 3: Discover the Statue of Liberty and Ellis Island.</p>
+                    <p>Day 4: Walk through the High Line and visit the Chelsea Market.</p>
+                </div>
+            </div>
+        </section>
+        <section id="booking">
+            <h2>Book Your Trip</h2>
+            <form>
+                <label for="destination">Destination:</label>
+                <select id="destination" name="destination">
+                    <option value="paris">Paris, France</option>
+                    <option value="tokyo">Tokyo, Japan</option>
+                    <option value="new_york">New York City, USA</option>
+                </select>
+                <label for="dates">Travel Dates:</label>
+                <input type="date" id="dates" name="dates" required>
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" name="guests" min="1" required>
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+        <section id="reviews">
+            <h2>User Reviews</h2>
+            <div class="reviews-list">
+                <!-- Review 1 -->
+                <div class="review-item">
+                    <h3>Amazing Trip to Paris!</h3>
+                    <p>I had a fantastic time exploring Paris. The Eiffel Tower was breathtaking, and the Louvre Museum was incredible.</p>
+                    <p><strong>Rating:</strong> ★★★★★</p>
+                </div>
+                <!-- Review 2 -->
+                <div class="review-item">
+                    <h3>Tokyo Adventure</h3>
+                    <p>Tokyo is a vibrant city with so much to offer. The mix of modern and traditional is truly unique.</p>
+                    <p><strong>Rating:</strong> ★★★★☆</p>
+                </div>
+                <!-- Review 3 -->
+                <div class="review-item">
+                    <h3>New York City Extravaganza</h3>
+                    <p>New York City is amazing! From the bright lights of Times Square to the peaceful walks in Central Park, it’s a city that has it all.</p>
+                    <p><strong>Rating:</strong> ★★★★★</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <div>
+                <a href="https://facebook.com" target="_blank">Facebook</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+            </div>
+        </section>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
